@@ -364,6 +364,7 @@
 
     <body>
         <section id="faq">
+            <img style="mix-blend-mode: multiply;left: 80%;position: absolute;top: 3600px;" src="./images/frequently-question.jpeg" alt="photo">
             <div class="faq-container">
                 <h1 class="faq-title" data-aos="fade-right">Frequently Asked Questions</h1>
                 <div id="FAQ">
@@ -461,7 +462,106 @@
             </div>
 
         </section>
+        <style>
+            /* Main FAQ Section */
+#faq {
+    background: linear-gradient(135deg, #c6f7e2, #b0f0c9); /* Light green gradient */
+    padding: 50px 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
+.faq-container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    border-radius: 10%;
+    border: 10px solid black;
+}
+
+/* FAQ Title */
+.faq-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Accordion Structure */
+.accordion {
+    background: #fff;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Hover and Bump Effect */
+.accordion:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* FAQ Title - Clickable */
+.FAQ-title {
+    background: linear-gradient(135deg, #c6f7e2, #b0f0c9);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background 0.3s ease;
+}
+
+/* Hover Effect for FAQ Title */
+.FAQ-title:hover {
+    background: #69cfec;
+}
+
+/* FAQ Question Text */
+.faqQuestion {
+    margin: 0;
+}
+
+/* Expand Toggle Icon */
+.expandToggle {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+/* FAQ Content */
+.FAQ-content {
+    background: #f9f9f9;
+    color: #333;
+    padding: 15px;
+    display: none;
+    font-size: 1em;
+}
+
+/* Transition for FAQ Content */
+.FAQ-content p {
+    margin: 0;
+}
+
+        </style>
+
+
+/* JavaScript to Toggle FAQ Content */
+<script>
+function toggleFAQ(element) {
+    const content = element.nextElementSibling;
+    if (content.style.display === "block") {
+        content.style.display = "none";
+        element.querySelector(".expandToggle").textContent = "+";
+    } else {
+        content.style.display = "block";
+        element.querySelector(".expandToggle").textContent = "-";
+    }
+}
+</script>
         <!-- feedback form -->
         <section id="feedback-form">
             <div class="container">
